@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Inspektor_API-REST</name>
+    </assembly>
+    <members>
+        <member name="M:Inspektor_API_REST.Controllers.AsignacionTokenController.GeneradorNuevoToken(Inspektor_API_REST.Models.NuevoUsuarioToken)">
+            <summary>
+            Método que permite crear y asignar un token JWT para los usuarios que quieran hacer uso del servicio.
+            </summary>
+            <param name="nuevoUsuarioToken"></param>
+            <returns>Devuelve el token JWT en formato string, previamente almacenado.</returns>
+        </member>
+        <member name="M:Inspektor_API_REST.Controllers.AsignacionTokenController.GeneradorTokenJWT(System.String)">
+            <summary>
+            Método generador del token. toma como identificadores parametros almacenados en "appsettings.json" definiendo la vigencia de cada token según el valor definido en
+            el parámetro "ExpirationTime". Está definido a 1 año por defecto.
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inspektor_API_REST.Controllers.AsignacionTokenController.ComprobacionTokenCreado(System.Int32)">
+            <summary>
+            Método que comprueba si el ID del usuario que se está ingresando para la creación de un token ya tiene uno asignado en la BD
+            </summary>
+            <param name="idUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inspektor_API_REST.Controllers.AsignacionTokenController.ConsultaNuevoUsuario(System.Int32)">
+            <summary>
+            Método que comprueba si hay registro de usuario que coincida con el ID ingresado para la asignación de token
+            </summary>
+            <param name="idUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inspektor_API_REST.Controllers.AsignacionTokenController.ObtenerDatosUsuario(System.String,System.String)">
+            <summary>
+            Método que busca los datos ingresados como creador del token
+            </summary>
+            <param name="usr"></param>
+            <param name="psswd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inspektor_API_REST.Controllers.ConsultaPrincipalController.Search(Inspektor_API_REST.Models.ObjetoConsulta)">
+            <summary>
+            Método de la consulta principal del API. Trae toda la información de listas relacionada con la información ingresada como parámetros.
+            </summary>
+            <param name="objetoConsulta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inspektor_API_REST.Controllers.ConsultaPrincipalController.setDetalleConsulta(Inspektor_API_REST.Models.Consultas,Inspektor_API_REST.Models.ObjetoConsulta)">
+            <summary>
+            Almacena los detalles de la consulta realizada
+            </summary>
+            <param name="consulta"></param>
+            <param name="consultaIndividual"></param>
+        </member>
+        <member name="M:Inspektor_API_REST.Controllers.ConsultaPrincipalController.DefinirGrupoListas(Inspektor_API_REST.Models.ObjetoRespuesta@,System.Collections.Generic.IEnumerable{Inspektor_API_REST.Models.Listas})">
+            <summary>
+            Método que permite agrupar todos los resultados de las listas asociadas en el grupo lista del objeto respuesta.
+            </summary>
+            <param name="objetoRespuesta"></param>
+            <param name="listas"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "69e7a142-0bf6-4e83-bfa6-168af5885d89",
+		"name": "API Inspektor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44398/api/Usuarios/30493",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44398/api/Usuarios/30493",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"Usuarios",
+						"30493"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WS Base Inspektor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://inspektor.datalaft.com:2071/WSInspektor.asmx/LoadWSInspektor?Numeiden=71984381&Nombre=Camilo torres Martinez&Password=R1skC0l0mb1@",
+					"protocol": "https",
+					"host": [
+						"inspektor",
+						"datalaft",
+						"com"
+					],
+					"port": "2071",
+					"path": [
+						"WSInspektor.asmx",
+						"LoadWSInspektor"
+					],
+					"query": [
+						{
+							"key": "Numeiden",
+							"value": "71984381"
+						},
+						{
+							"key": "Nombre",
+							"value": "Camilo torres Martinez"
+						},
+						{
+							"key": "Password",
+							"value": "R1skC0l0mb1@"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WS Base Inspektor Local",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:56657/WSInspektor.asmx/LoadWSInspektor?Numeiden=71984381&Nombre=Camilo torres Martinez&Password=R1skC0l0mb1@/WSInspektor.aspx",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56657",
+					"path": [
+						"WSInspektor.asmx",
+						"LoadWSInspektor"
+					],
+					"query": [
+						{
+							"key": "Numeiden",
+							"value": "71984381"
+						},
+						{
+							"key": "Nombre",
+							"value": "Camilo torres Martinez"
+						},
+						{
+							"key": "Password",
+							"value": "R1skC0l0mb1@/WSInspektor.aspx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta principal - Local",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYi5jb2xvcmFkbyAgICAgICAgICAiLCJuYmYiOjE2NTE4MTQyMjcsImV4cCI6MTY4MzM3MTgyNywiaWF0IjoxNjUxODE0MjI3LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDM5OC8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDM5OC8ifQ.Qa3RIHOg7MFCGha3PpI41Xyih-g35x3UTWw5T-HSais",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Camilo torres Martinez\",  \r\n  \"identificacion\": \"71984381\",\r\n  \"cantidadPalabras\": null,\r\n  \"tienePrioridad_4\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/ConsultaPrincipal",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"ConsultaPrincipal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generación de token JWT",
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "F895AABD",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Usuario\":\"b.colorado\",\r\n    \"Contrasena\":\"1144058223\",\r\n    \"IdUsuarioToken\": 28709\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44398/api/AsignacionToken/NuevoTokenJWT",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44398",
+					"path": [
+						"api",
+						"AsignacionToken",
+						"NuevoTokenJWT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta principal - Servidor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYi5jb2xvcmFkbyAgICAgICAgICAiLCJuYmYiOjE2NTE4MTQyMjcsImV4cCI6MTY4MzM3MTgyNywiaWF0IjoxNjUxODE0MjI3LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDM5OC8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDM5OC8ifQ.Qa3RIHOg7MFCGha3PpI41Xyih-g35x3UTWw5T-HSais",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Camilo torres Martinez\",  \r\n  \"identificacion\": \"71984381\",\r\n  \"cantidadPalabras\": \"\",\r\n  \"tienePrioridad_4\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ambientetest.datalaft.com:2095/api/ConsultaPrincipal",
+					"protocol": "https",
+					"host": [
+						"ambientetest",
+						"datalaft",
+						"com"
+					],
+					"port": "2095",
+					"path": [
+						"api",
+						"ConsultaPrincipal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,103 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Inspektor_API_REST</RootNamespace>
+		<ApplicationIcon>inspektor.ico</ApplicationIcon>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>
+			bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml
+		</DocumentationFile>
+		<!--<DocumentationFile>C:\Users\User\Documents\Repositorios\Inspektor_API-REST\bin\InspektorAPI.xml</DocumentationFile>-->
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Controllers\GeneradorToken.cs" />
+	  <Compile Remove="Controllers\NotificacionCorreo.cs" />
+	  <Compile Remove="Controllers\UsuariosController.cs" />
+	  <Compile Remove="Controllers\ValidadorToken.cs" />
+	  <Compile Remove="Models\Consultum.cs" />
+	  <Compile Remove="Models\Consultum1.cs" />
+	  <Compile Remove="Models\DetalleCon.cs" />
+	  <Compile Remove="Models\DetalleConsulta2019.cs" />
+	  <Compile Remove="Models\DetalleConsultaArchivo.cs" />
+	  <Compile Remove="Models\DetalleConsultaArchivoResultado.cs" />
+	  <Compile Remove="Models\DetalleConsultaPropiaArchivo.cs" />
+	  <Compile Remove="Models\DetalleConsultaPropium.cs" />
+	  <Compile Remove="Models\DetalleConsultum.cs" />
+	  <Compile Remove="Models\DetalleConsultum1.cs" />
+	  <Compile Remove="Models\Empresa.cs" />
+	  <Compile Remove="Models\EmpresasMonitoreoTx.cs" />
+	  <Compile Remove="Models\EmpresasServiciosAdicionale.cs" />
+	  <Compile Remove="Models\EmpresaTipoLista.cs" />
+	  <Compile Remove="Models\EmpresaTipoListasLog.cs" />
+	  <Compile Remove="Models\EmpresavsTipoListaPropium.cs" />
+	  <Compile Remove="Models\GrupoListum.cs" />
+	  <Compile Remove="Models\ListaBlanca.cs" />
+	  <Compile Remove="Models\ListaPropium.cs" />
+	  <Compile Remove="Models\Listum.cs" />
+	  <Compile Remove="Models\Listum1.cs" />
+	  <Compile Remove="Models\Menu.cs" />
+	  <Compile Remove="Models\Pep.cs" />
+	  <Compile Remove="Models\Plane.cs" />
+	  <Compile Remove="Models\Role.cs" />
+	  <Compile Remove="Models\Submenu.cs" />
+	  <Compile Remove="Models\SubmenusRole.cs" />
+	  <Compile Remove="Models\SubmenusRolesEmpresa.cs" />
+	  <Compile Remove="Models\TipoDocumento.cs" />
+	  <Compile Remove="Models\TipoListum.cs" />
+	  <Compile Remove="Models\TipoTercero.cs" />
+	  <Compile Remove="Models\Usuario.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Models\Categorium.zip" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="inspektor.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.ReportViewer" Version="3.0.0.200103" />
+		<PackageReference Include="AWSSDK.Core" Version="3.7.10.11" />
+		<PackageReference Include="Azure.Storage.Common" Version="12.13.0" />
+		<PackageReference Include="Azure.Storage.Files.Shares" Version="12.12.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.4" />
+		<PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.16" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.16">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="PDFsharp" Version="1.50.5147" />
+		<PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Classes\" />
+		<Folder Include="DataSet\" />
+		<Folder Include="Reports\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="DataSet\DataSetListaInformativaInformeCompleto.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>DataSetListaInformativaInformeCompleto.xsd</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="DataSet\DataSetListaInformativaInformeCompleto.xsd">
+	    <Generator>MSDataSetGenerator</Generator>
+	    <LastGenOutput>DataSetListaInformativaInformeCompleto.Designer.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
+
+</Project>
